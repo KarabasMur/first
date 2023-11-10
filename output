@@ -9,3 +9,14 @@ print()
 print("Python", end=" ")
 print("is easy to learn.")
 no no no
+apiVersion: serving.knative.dev/v1
+kind: Service
+...
+spec:
+  template:
+    spec:
+      containers:
+      - image: IMAGE_URL
+        ports:
+        - name: h2c
+          containerPort: 8080
